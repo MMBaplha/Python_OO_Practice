@@ -7,8 +7,8 @@ class WordFinder:
     
     def __init__(self, path):
         """Read dictionary and reports the number of words read."""
-        with open(path, 'r') as file: #file = open(path)
-            self.words = self._parse(file)
+        file = open(path)
+        self.words = self._parse(file)
         print(f"{len(self.words)} words read")
 
     def _parse(self, file):
